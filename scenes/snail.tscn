@@ -1,0 +1,122 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://bb67f5uxct7u3" path="res://assets/images/Snail/Walk (38x24).png" id="1_walk"]
+[ext_resource type="Script" path="res://scripts/Snail.cs" id="2_script"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail0"]
+atlas = ExtResource("1_walk")
+region = Rect2(0, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail1"]
+atlas = ExtResource("1_walk")
+region = Rect2(38, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail2"]
+atlas = ExtResource("1_walk")
+region = Rect2(76, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail3"]
+atlas = ExtResource("1_walk")
+region = Rect2(114, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail4"]
+atlas = ExtResource("1_walk")
+region = Rect2(152, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail5"]
+atlas = ExtResource("1_walk")
+region = Rect2(190, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail6"]
+atlas = ExtResource("1_walk")
+region = Rect2(228, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail7"]
+atlas = ExtResource("1_walk")
+region = Rect2(266, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail8"]
+atlas = ExtResource("1_walk")
+region = Rect2(304, 0, 38, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snail9"]
+atlas = ExtResource("1_walk")
+region = Rect2(342, 0, 38, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snail"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail8")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snail9")
+}],
+"loop": true,
+"name": &"running",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snail"]
+size = Vector2(30, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snail"]
+radius = 8.0
+
+[node name="Snail" type="Area2D" unique_id=795425564]
+scale = Vector2(3, 3)
+script = ExtResource("2_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=423946139]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_snail")
+animation = &"running"
+autoplay = "running"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=947876999]
+position = Vector2(-2, 5)
+shape = SubResource("RectangleShape2D_snail")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1497871144]
+position = Vector2(5, -2)
+shape = SubResource("CircleShape2D_snail")
+
+[node name="Timer" type="Timer" parent="." unique_id=203694312]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]

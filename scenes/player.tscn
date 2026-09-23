@@ -1,10 +1,12 @@
-[gd_scene format=3 uid="uid://ds7s1xju61rml"]
+[gd_scene format=3 uid="uid://tx6jxonw4gm6"]
 
 [ext_resource type="Texture2D" uid="uid://d0qxam8fbn08j" path="res://assets/images/Pink Man/Hit (32x32).png" id="1_dqkch"]
-[ext_resource type="Script" uid="uid://0cq3gpotr87i" path="res://scripts/player.cs" id="1_qlg0r"]
+[ext_resource type="Script" path="res://scenes/Player.cs" id="1_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://c3w63x65e40ph" path="res://assets/images/Pink Man/Idle (32x32).png" id="2_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://bmlw6m4cw1bq7" path="res://assets/images/Pink Man/Jump (32x32).png" id="3_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://e262b21q38oa" path="res://assets/images/Pink Man/Run (32x32).png" id="4_fjrip"]
+[ext_resource type="AudioStream" uid="uid://dpjb42k0rvius" path="res://assets/sounds/jump.wav" id="5_jumps"]
+[ext_resource type="AudioStream" uid="uid://d2fwxevl4fy4u" path="res://assets/sounds/death.wav" id="6_death"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("1_dqkch")
@@ -144,7 +146,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_jej6c")
 }],
 "loop": 1,
-"name": &"hit",
+"name": &"dying",
 "speed": 20.0
 }, {
 "frames": [{
@@ -190,7 +192,7 @@ animations = [{
 "texture": ExtResource("3_tuyoq")
 }],
 "loop": 1,
-"name": &"jump",
+"name": &"jumping",
 "speed": 20.0
 }, {
 "frames": [{
@@ -231,7 +233,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_jc3p3")
 }],
 "loop": 1,
-"name": &"run",
+"name": &"running",
 "speed": 20.0
 }]
 
@@ -251,3 +253,9 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1595795788]
 position = Vector2(2.666667, 2.333333)
 shape = SubResource("RectangleShape2D_f874d")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=482915037]
+stream = ExtResource("5_jumps")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=294804716]
+stream = ExtResource("6_death")

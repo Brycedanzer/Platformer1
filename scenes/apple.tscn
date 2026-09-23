@@ -1,0 +1,224 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://rgkcigqts6nd" path="res://assets/images/Collectibles/Apple.png" id="1_apple"]
+[ext_resource type="Texture2D" uid="uid://cxurunjj3ax2m" path="res://assets/images/Collectibles/Collected.png" id="2_collected"]
+[ext_resource type="Script" path="res://scripts/Apple.cs" id="3_script"]
+[ext_resource type="AudioStream" uid="uid://2hqiquoe3eio" path="res://assets/sounds/collect_apple.wav" id="4_sound"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple0"]
+atlas = ExtResource("1_apple")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple1"]
+atlas = ExtResource("1_apple")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple2"]
+atlas = ExtResource("1_apple")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple3"]
+atlas = ExtResource("1_apple")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple4"]
+atlas = ExtResource("1_apple")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple5"]
+atlas = ExtResource("1_apple")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple6"]
+atlas = ExtResource("1_apple")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple7"]
+atlas = ExtResource("1_apple")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple8"]
+atlas = ExtResource("1_apple")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple9"]
+atlas = ExtResource("1_apple")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple10"]
+atlas = ExtResource("1_apple")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple11"]
+atlas = ExtResource("1_apple")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple12"]
+atlas = ExtResource("1_apple")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple13"]
+atlas = ExtResource("1_apple")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple14"]
+atlas = ExtResource("1_apple")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple15"]
+atlas = ExtResource("1_apple")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apple16"]
+atlas = ExtResource("1_apple")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_collected0"]
+atlas = ExtResource("2_collected")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_collected1"]
+atlas = ExtResource("2_collected")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_collected2"]
+atlas = ExtResource("2_collected")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_collected3"]
+atlas = ExtResource("2_collected")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_collected4"]
+atlas = ExtResource("2_collected")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_collected5"]
+atlas = ExtResource("2_collected")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apple"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_collected0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_collected1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_collected2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_collected3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_collected4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_collected5")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple8")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple9")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple10")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple11")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple12")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple13")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple14")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple15")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apple16")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apple"]
+radius = 7.0
+
+[node name="Apple" type="Area2D" unique_id=255555737]
+scale = Vector2(3, 3)
+script = ExtResource("3_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1863673106]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_apple")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250797845]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_apple")
+
+[node name="CollectedSound" type="AudioStreamPlayer2D" parent="." unique_id=302142728]
+stream = ExtResource("4_sound")
+pitch_scale = 1.5
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="OnAnimatedSprite2DAnimationLooped"]
