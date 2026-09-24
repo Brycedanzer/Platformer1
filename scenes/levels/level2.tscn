@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://tx6jxonw4gm6" path="res://scenes/player.tscn" id="2_4tcl0"]
 [ext_resource type="PackedScene" path="res://scenes/snail.tscn" id="3_snail"]
 [ext_resource type="PackedScene" path="res://scenes/apple.tscn" id="4_apple"]
+[ext_resource type="PackedScene" path="res://scenes/bouncer.tscn" id="6_bouncer"]
+[ext_resource type="PackedScene" path="res://scenes/spinner.tscn" id="7_spinner"]
 [ext_resource type="Texture2D" uid="uid://bfq01mumip0xg" path="res://assets/images/Tilemap/Checkpoint (Flag Idle)(64x64).png" id="5_flag"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4tcl0"]
@@ -285,6 +287,12 @@ position = Vector2(420, 105)
 
 [node name="Snail2" parent="Enemies" unique_id=224551738 instance=ExtResource("3_snail")]
 position = Vector2(1040, 105)
+
+[node name="Bouncer" parent="Enemies" unique_id=1802167180 instance=ExtResource("6_bouncer")]
+position = Vector2(560, -150)
+
+[node name="Spinner" parent="Enemies" unique_id=1119297213 instance=ExtResource("7_spinner")]
+position = Vector2(720, 105)
 
 [node name="Apples" type="Node2D" parent="." unique_id=1189709946]
 

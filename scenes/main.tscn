@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bsxq2anbn55rw"]
 
 [ext_resource type="PackedScene" uid="uid://djt476rgujy0o" path="res://scenes/levels/level1.tscn" id="1_o5qli"]
-[ext_resource type="Script" path="res://scripts/Main.cs" id="2_main"]
+[ext_resource type="Script" uid="uid://ev0td3ps3wvl" path="res://scripts/Main.cs" id="2_main"]
 [ext_resource type="FontFile" uid="uid://b74o8yc1nce6c" path="res://assets/fonts/Square-Black.ttf" id="3_font"]
 [ext_resource type="AudioStream" uid="uid://b7wqn135skich" path="res://assets/sounds/music.ogg" id="4_music"]
 
@@ -61,6 +61,10 @@ modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)

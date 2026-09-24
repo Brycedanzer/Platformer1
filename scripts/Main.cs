@@ -42,6 +42,7 @@ public partial class Main : Node2D
 		// Change level
 		if (currentLevelRoot != null)
 		{
+			RemoveChild(currentLevelRoot);
 			currentLevelRoot.QueueFree();
 		}
 
@@ -88,16 +89,26 @@ public partial class Main : Node2D
 	// ---------- SIGNAL HANDLERS ----------
 	private void OnPlayerDied(Node2D body)
 	{
-		((Player)body).Die();
-		LoadLevel(level, false, true);
+		if (body is Player player)
+		{
+			player.Die();
+			LoadLevel(level, false, true);
+		}
 	}
 
 	private void OnExitBodyEntered(Node2D body)
 	{
-		if (body.Name == "Player")
+		if (body is Player player)
 		{
 			level += 1;
-			((Player)body).CanMove = false;
+
+			// There are only 3 levels, so after level 3 go back to level 1
+			if (level > 3)
+			{
+				level = 1;
+			}
+
+			player.CanMove = false;
 			LoadLevel(level, false, false);
 		}
 	}
